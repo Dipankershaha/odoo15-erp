@@ -1,0 +1,73 @@
+<odoo>
+
+    
+    <record id="employee_qualification_tree" model="ir.ui.view">
+        <field name="name">employee.qualification.tree</field>
+        <field name="model">employee.qualification</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                    <field name='degree'/>
+                    <field name='institute'/>
+                    <field name='major'/>
+                    <field name='start_date'/>
+                    <field name='end_date'/>
+                    <field name='duration'/>
+                    
+                    
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="employee_qualification_form" model="ir.ui.view">
+        <field name="name">employee.qualification.form</field>
+        <field name="model">employee.qualification</field>
+        <field name="arch" type="xml">
+            <form>
+               
+                <sheet>
+                    <group>
+                        <group>
+                            <field name='degree'/>
+                            <field name='institute'/>
+                            <field name='major'/>
+                            <field name='start_date'/>
+                            <field name='end_date'/>
+                            <field name='duration'/>
+                            
+                            
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+ 
+
+    <record id="employee_qualification_search" model="ir.ui.view">
+        <field name="name">employee.qualification.search</field>
+        <field name="model">employee.qualification</field>
+        <field name="arch" type="xml">
+            <search string="Qualification">
+                <field name='degree'/>
+            </search>
+        </field>
+    </record>
+
+    <record id="employee_qualification_action" model="ir.actions.act_window">
+        <field name="name">Employee qualification</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">employee.qualification</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create qualification
+            </p>
+        </field>
+    </record>
+
+    
+
+    
+</odoo>

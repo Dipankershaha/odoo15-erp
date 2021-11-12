@@ -1,0 +1,25 @@
+<odoo>
+  <data>
+
+  
+  <!-- Root Menu -->
+   <menuitem name="Custom Academic Qualification" id="employee_menu_root"/>
+
+
+            <!-- Degree Menu -->
+    <menuitem name="Degree" parent="employee_menu_root" id="menu_employee_degree" action="employee_degree_action" sequence="1"/>
+
+          <!-- Institute Menu -->
+    <menuitem name="Institute" parent="employee_menu_root" id="menu_employee_institute" action="employee_institute_action" sequence="2"/>
+
+
+        <!-- Major Menu      -->
+    <menuitem name="Majors" parent="employee_menu_root" id="menu_employee_major" action="employee_major_action" sequence="3"/>
+
+
+        <!-- Qualification Menu -->
+    <menuitem name="Qualification" parent="employee_menu_root" id="menu_employee_qualification" action="employee_qualification_action" sequence="4"/>
+  
+  
+  </data>
+</odoo>

@@ -1,0 +1,63 @@
+<odoo>
+
+    
+    <record id="employee_degree_tree" model="ir.ui.view">
+        <field name="name">employee.degree.tree</field>
+        <field name="model">employee.degree</field>
+        <field name="arch" type="xml">
+            <tree>
+                    <field name='name'/>
+                    
+                    
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="employee_degree_form" model="ir.ui.view">
+        <field name="name">employee.degree.form</field>
+        <field name="model">employee.degree</field>
+        <field name="arch" type="xml">
+            <form>
+               
+                <sheet>
+                    <group>
+                        <group>
+                            <field name='name'/>
+                            
+                            
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+ 
+
+    <record id="employee_degree_search" model="ir.ui.view">
+        <field name="name">employee.degree.search</field>
+        <field name="model">employee.degree</field>
+        <field name="arch" type="xml">
+            <search string="Degree">
+                <field name='name'/>
+            </search>
+        </field>
+    </record>
+
+    <record id="employee_degree_action" model="ir.actions.act_window">
+        <field name="name">Employee Degree</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">employee.degree</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create Degree
+            </p>
+        </field>
+    </record>
+
+    <menuitem name="Custom Academic Qualification" id="employee_menu_root"/>
+
+    <menuitem name="Degree" parent="employee_menu_root" id="menu_employee_degree" action="employee_degree_action" sequence="1"/>
+</odoo>

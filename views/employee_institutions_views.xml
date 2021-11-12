@@ -1,0 +1,63 @@
+<odoo>
+
+    
+    <record id="employee_institute_tree" model="ir.ui.view">
+        <field name="name">employee.institute.tree</field>
+        <field name="model">employee.institute</field>
+        <field name="arch" type="xml">
+            <tree>
+                    <field name='name'/>
+                    
+                    
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="employee_institute_form" model="ir.ui.view">
+        <field name="name">employee.institute.form</field>
+        <field name="model">employee.institute</field>
+        <field name="arch" type="xml">
+            <form>
+               
+                <sheet>
+                    <group>
+                        <group>
+                            <field name='name'/>
+                            
+                            
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+ 
+
+    <record id="employee_institute_search" model="ir.ui.view">
+        <field name="name">employee.institute.search</field>
+        <field name="model">employee.institute</field>
+        <field name="arch" type="xml">
+            <search string="institute">
+                <field name='name'/>
+            </search>
+        </field>
+    </record>
+
+    <record id="employee_institute_action" model="ir.actions.act_window">
+        <field name="name">Employee institute</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">employee.institute</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create institute
+            </p>
+        </field>
+    </record>
+
+    
+
+   
+</odoo>

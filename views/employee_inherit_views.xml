@@ -1,0 +1,30 @@
+<odoo>
+
+        <record id="employee_inherit_id" model="ir.ui.view">
+            <field name="name">	hr.view_employee_form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form" />
+            <field name="arch" type="xml">  
+                <xpath expr="//notebook/page[1]" position="after">  
+                    <page string="Academic Qualifications">
+                        <field name="qualification"/>
+                    </page> 
+                </xpath>
+
+                <!-- <xpath expr="//notebook/page[2]" position="attributes">
+                    <attribute name="groups">academic_qualification.bjit_engineer</attribute>
+                </xpath> -->
+
+                <!-- <xpath expr="//notebook/page[2]" position="attributes">
+                   
+                    <attribute name="domain_force">[('user_id','=',uid)]</attribute>
+                    
+                    
+                    <attribute name="groups">academic_qualification.bjit_engineer</attribute>
+                </xpath> -->
+
+            </field>
+
+        </record>
+
+</odoo>
